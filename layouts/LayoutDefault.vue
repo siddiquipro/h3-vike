@@ -3,10 +3,13 @@
     <Sidebar>
       <Logo />
       <Link href="/"> Welcome </Link>
-
       <Link href="/star-wars"> Data Fetching </Link>
+      <Link href="/create"> Create </Link>
+      <Link href="/update"> Update </Link>
     </Sidebar>
-    <Content><slot /></Content>
+    <Content>
+      <slot />
+    </Content>
   </div>
 </template>
 

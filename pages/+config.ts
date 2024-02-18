@@ -7,7 +7,6 @@ import Layout from "../layouts/LayoutDefault.vue";
 export default {
   Layout,
   Head,
-  // <title>
-  title: "My Vike App",
+  title: "Vike App SSR",
   extends: vikeVue,
 } satisfies Config;
