@@ -30,11 +30,11 @@ dependencies:
     specifier: ^4.7.1
     version: 4.7.1
   vike:
-    specifier: ^0.4.161
-    version: 0.4.162(vite@5.1.3)
+    specifier: 0.4.162-commit-49fe40c
+    version: 0.4.162-commit-49fe40c(vite@5.1.3)
   vike-vue:
-    specifier: ^0.6.1
-    version: 0.6.2(vike@0.4.162)(vue@3.4.19)
+    specifier: ^0.6.3
+    version: 0.6.3(vike@0.4.162-commit-49fe40c)(vue@3.4.19)
   vite:
     specifier: ^5.1.1
     version: 5.1.3
@@ -1111,18 +1111,18 @@ packages:
       pathe: 1.1.2
     dev: false
 
-  /vike-vue@0.6.2(vike@0.4.162)(vue@3.4.19):
-    resolution: {integrity: sha512-2dYMmV+GLgDSxMdVrIm0q33mEeDdHvhkK6tKyOu+2d8O8YWxlsHN/pjUtlQhn7q28nvwLmBhBhn0dLqfsCDnWQ==}
+  /vike-vue@0.6.3(vike@0.4.162-commit-49fe40c)(vue@3.4.19):
+    resolution: {integrity: sha512-oVMWkxJfhiFBu99pID/4P3qng1fnb9C15W+SAQZ5GOr+pXSfL2DAMNi1kCQJ4mccZ/Ec0Xk+jfYMp0LZOucltw==}
     peerDependencies:
       vike: ^0.4.160
       vue: ^3.0.0
     dependencies:
-      vike: 0.4.162(vite@5.1.3)
+      vike: 0.4.162-commit-49fe40c(vite@5.1.3)
       vue: 3.4.19(typescript@5.3.3)
     dev: false
 
-  /vike@0.4.162(vite@5.1.3):
-    resolution: {integrity: sha512-gs5ThCDVLDKnaGfZRNDN1h0ncP/3XNT3seCRWkcz4yT3AFhRTFVB+/bWfsoUryfXQyWYRLKVCk+bEURH1ntbTg==}
+  /vike@0.4.162-commit-49fe40c(vite@5.1.3):
+    resolution: {integrity: sha512-FTbk636KU6HAWga22O2dkNegfJkvFvvKqQvZ2LZ7Zyb5cNRliBCNZbJs+ViRLfzrQzTdjbnTjQrc/zmSuaa0DQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     peerDependencies:
