@@ -4,11 +4,13 @@
       <Logo />
       <Link href="/"> Welcome </Link>
       <Link href="/star-wars"> Data Fetching </Link>
-      <Link href="/create"> Create </Link>
-      <Link href="/update"> Update </Link>
+      <Link href="/posts"> Posts </Link>
+      <Link href="/users"> Users </Link>
+      <Link href="/todos"> ToDos </Link>
+      <Link href="/comments"> Comments </Link>
     </Sidebar>
     <Content>
-      <slot />
+      <slot :key="ctx.urlPathname" />
     </Content>
   </div>
 </template>
@@ -18,21 +20,12 @@ import Content from "../components/Content.vue";
 import Link from "../components/Link.vue";
 import Logo from "../components/Logo.vue";
 import Sidebar from "../components/Sidebar.vue";
+import { usePageContext } from "vike-vue/usePageContext";
+const ctx = usePageContext();
 </script>
 
 <style>
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #f0f0f0;
-}
-
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
+@import "./tailwind.css";
 </style>
 
 <style scoped>

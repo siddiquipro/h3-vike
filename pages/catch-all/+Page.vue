@@ -1,29 +1,36 @@
 <template>
-  <div>
-    <h1>Default Page for all routes</h1>
-    <div>
-      <p>Count: {{ count }}</p>
-      <button @click="doubleCount">Double Count</button>
+  <div class="max-w-2xl w-full">
+    <div class="flex items-center justify-between">
+      <h1 class="text-sm text-gray-500">Default Page for all routes</h1>
     </div>
 
-    <pre>{{ dataOption }}</pre>
+    <div v-if="hasBlock && pageData.data">
+      <component :is="getBlockComp()" :data="pageData.data" />
+    </div>
+
+    <div v-else>
+      <p>No block found for {{ block }}</p>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useData } from "vike-vue/useData";
-import { onMounted, ref } from "vue";
+import { computed } from "vue";
+import blocks from "../../blocks";
 
-const dataOption = useData<any>();
+const pageData = useData<any>();
 
-const count = ref(0);
+const blockNames = Object.keys(blocks);
+const block = pageData?.name as keyof typeof blocks | undefined;
 
-const doubleCount = () => {
-  count.value = count.value + 2;
-};
-
-onMounted(() => {
-  console.log("mounted catch-all page");
-  doubleCount();
+const hasBlock = computed(() => {
+  if (!block) return false;
+  return blockNames.includes(block);
 });
+
+const getBlockComp = () => {
+  if (!block) return null;
+  return blocks[block];
+};
 </script>
