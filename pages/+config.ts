@@ -7,6 +7,6 @@ import Layout from "../layouts/LayoutDefault.vue";
 export default {
   Layout,
   Head,
-  title: "Vike App SSR",
+  title: "H3 + Vike + Vue App with SSR capabilities",
   extends: vikeVue,
 } satisfies Config;

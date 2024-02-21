@@ -4,6 +4,7 @@
       <Logo />
       <Link href="/"> Welcome </Link>
       <Link href="/star-wars"> Data Fetching </Link>
+      <Link href="/spa"> SPA Page </Link>
       <Link href="/posts"> Posts </Link>
       <Link href="/users"> Users </Link>
       <Link href="/todos"> ToDos </Link>

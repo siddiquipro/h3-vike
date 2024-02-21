@@ -1,11 +1,8 @@
-import commentsVue from "./comments.vue";
-import postsVue from "./posts.vue";
-import usersVue from "./users.vue";
-import todosVue from "./todos.vue";
+import { defineAsyncComponent } from "vue";
 
 export default {
-  comments: commentsVue,
-  posts: postsVue,
-  users: usersVue,
-  todos: todosVue,
+  comments: defineAsyncComponent(() => import("./comments.vue")),
+  posts: defineAsyncComponent(() => import("./posts.vue")),
+  users: defineAsyncComponent(() => import("./users.vue")),
+  todos: defineAsyncComponent(() => import("./todos.vue")),
 };

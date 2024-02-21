@@ -30,7 +30,7 @@ const hasBlock = computed(() => {
 });
 
 const getBlockComp = () => {
-  if (!block) return null;
+  if (!block || !blocks[block]) return null;
   return blocks[block];
 };
 </script>
